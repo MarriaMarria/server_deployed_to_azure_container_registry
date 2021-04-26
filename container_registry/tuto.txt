@@ -1,0 +1,58 @@
+npm init -y to create new project
+##
+npm i typescript --save-dev to install typescript
+##
+npx tsc --init to create tsconfig.json
+##
+in tsconfig put: 
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "target": "es6",
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "outDir": "dist",
+      "strict": true
+    },
+    "lib": ["es2018"]
+  }
+  ##
+npm install express to install express
+npm i --save express
+npm i -D @types/express
+
+##
+npm install eslint --save-dev to install eslint
+
+## 
+npx eslint --init to configurate
+
+##
+in package.json add:
+
+  "scripts": {
+    "start": "tsc && node build/index.js",
+    "lint": "eslint src/*.ts --fix"
+  }
+
+## 
+add .dockerignore and put node_modules there
+
+##
+add Dockerfile
+
+##
+docker build . -t nameOfImage:target
+## 
+follow the steps from container registry
+docker login
+docker tag nameOfImage
+docker push
+
+##
+create container instance, add the correct port
+
+##
+copy either dns or public ip to the browser, add :port
+
